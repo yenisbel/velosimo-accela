@@ -1,111 +1,31 @@
 openapi: 3.0.0
 info:
   version: v1
-  title: OMNA Commerce API
-  termsOfService: 'https://cenit.io/terms'
+  title: Velosimo Accela API
+  termsOfService: ''
   contact:
-    email: hello@omna.io
-    url: 'https://cenitio.slack.com/messages/support'
+    email: 
+    url: ''
   license:
     name: Apache 2.0
     url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
   x-logo:
-    url: omna_logo.png
+    url: 
   description: |
     # Introduction
 
-    The OMNA Commerce API is a simple connector API to integrate ecommerce sales channels, such us
-    marketplaces and ecommerce platforms.
+    The Velosimo Accela API 
     
-    An easy way to get orders, synchronize inventories and list product's information to commerce solutions around the globe.
-
-    We are starting in marketplaces in Southeast Asia (Shopee, Lazada) but we will continue to make it global.
-
-    It is built on top of an integration platform https://cenit.io
-
-    This API is for individual retailers, SaaS services, or any business that needs to handle multiple commerce integrations.
-
-    * It is built over REST services on HTTPS.
-
-    * It has predictable resource URLs.
-
-    * It returns HTTP response codes to indicate errors.
-
-    * It accepts and returns JSON in the HTTP body.
-
-    * You can use your favorite HTTP/REST library for your programming language
-    to use OMNA Commerce API.
 
 tags:
   - name: Available Integrations
     description: |
-      This term refers to the set of resources and services that can be included in OMNA for the expansion of
-      its scope and integration with other platforms.
+      This .
 
       ### Available Integrations:
 
-      - **OMNAv2**: It is the main collection and the basis for working at OMNA Commerce LTD.
-      - **OMNAv2-Lazada**: It includes support for the integration of OMNA with Lazada's marketplaces.
-      - **OMNAv2-Shopee**: It includes support for the integration of OMNA with Shopee's marketplaces.
-      - **OMNAv2-Shopify**: It includes support for the integration of OMNA with Shopify's marketplaces.
-
-      ### Future Integrations:
-
-      - **OMNAv2-Qoo10**: It includes support for the integration of OMNA with Qoo10's marketplaces.
-      - **OMNAv2-AmazonMWS**: It includes support for the integration of OMNA with AmazonMWS's marketplaces.
-      - **OMNAv2-MercadoLible**: It includes support for the integration of OMNA with MercadoLible's marketplaces.
-      - **OMNAv2-Backmarket**: It includes support for the integration of OMNA with Backmarket's marketplaces.
-      - **OMNAv2-Shipstation**: It includes support for the integration of OMNA with Shipstation's shipping platform for ecommerce fulfillment.
-
-  - name: Connected Integrations
-    description: |
-      This term refers to the configuration of a connection that will allow access to the set of resources and services
-      through integration with other foreign platforms.
-
-  - name: Orders
-    description: |
-      Operations on the orders
-
-  - name: Orders of an Integration
-    description: |
-      Operations on the orders of an Integration.
-
-  - name: Products
-    description: |
-      Operations on the products.
-
-  - name: Products of an Integration
-    description: |
-      Operations on the products of an Integration.
-
-  - name: Variants
-    description: |
-      Operations on the product variants.
-
-  - name: Variants of an Integration
-    description: |
-      Operations on the product variants of an Integration.
-
-  - name: Categories
-    description: |
-      Operations on the product categories of an Integration.
-
-  - name: Brands
-    description: |
-      Operations on the product brands of an Integration.
-
-  - name: Flows
-    description: |
-      Operations on the flows.
-
-      The flows allow the user to configure a set of predetermined tasks to run on an integration. These tasks can be
-      executed manually or automated through the configuration and activation of their schedulers. For example,
-      the user might want to receive products from an integration 1 and orders form another integration.
-
-  - name: Tasks
-    description: |
-      Each of the actions that make up the api generate one or more tasks when they are process. In the details of the task
-      we can find information about the processing triggered by the action like status, fulfillment %, notifications, etc.
+      - **Accela**: It is the main collection and the basis for working at OMNA Commerce LTD.
+      - **Accela-Laserfiche**: It includes support for the integration of Velosimo with Lazada's marketplaces.
 
   - name: Webhooks
     description: |
@@ -155,10 +75,6 @@ tags:
         raise 'The request is not valid...' if hmac1 != hmac2
       ```
 
-  - name: Users
-    description: |
-      A user represents a person or a company, it is a user in Cenit System.
-
 servers:
   - url: 'https://cenit.io/app/ecapi-v1'
 
@@ -171,32 +87,20 @@ x-tagGroups:
   - name: Integrations
     tags:
       - Available Integrations
-      - Connected Integrations
-
-  - name: Orders
-    tags:
-      - Orders
-      - Orders of an Integration
-
-  - name: Products
-    tags:
-      - Products
-      - Products of an Integration
-      - Variants
-      - Variants of an Integration
-      - Categories
-      - Brands
 
   - name: Workflows
     tags:
       - Flows
-      - Tasks
       - Webhooks
+
+  - name: Algorithms
+    tags:
+      - Definition
 
   - name: Security
     tags:
-      - Users
+      - Tenants
 
 externalDocs:
-  description: Developer guide
-  url: https://github.com/cenit-io/eCapi/wiki
+  description: 
+  url: 
